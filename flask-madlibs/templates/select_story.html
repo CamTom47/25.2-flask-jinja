@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{% block title%}
+Select Story
+{% endblock%}
+
+{% block content%}
+<form action="/prompts">
+    <select name="story_id" id="">
+        {% for story in stories %}
+        <option value="{{story.code}}">{{story.title}}</option>
+        {% endfor %}
+    </select>
+    <button>Submit</button>
+</form>
+{% endblock%}
